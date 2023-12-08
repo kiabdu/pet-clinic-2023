@@ -26,5 +26,5 @@ jobs:
           mvn package
           docker build --tag kiabdu/petclinic/pet-clinic:latest -f Dockerfile .
           echo ${{ secrets.secret }} | docker login -u 'kiabdu' --password-stdin
-          docker push https://hub.docker.com/repository/docker/kiabdu/petclinic/general/pet-clinic:latest
+          docker push https://hub.docker.com/repository/docker/kiabdu/pet-clinic:latest
 
