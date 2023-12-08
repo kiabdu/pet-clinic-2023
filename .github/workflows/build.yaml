@@ -25,6 +25,6 @@ jobs:
         #### AUFGABE 3 COMPILE, DOCKER BUILD UND PUSH
           mvn package
           docker build --tag kiabdu/petclinic/pet-clinic:latest -f Dockerfile .
-          echo ${{ secrets.password }} | docker login -u 'kiabdu' --password-stdin
+          echo ${{ secrets.petclinic_test }} | docker login -u 'kiabdu' --password-stdin
           docker push https://hub.docker.com/repositories/kiabdu/petclinic/pet-clinic:latest
 
